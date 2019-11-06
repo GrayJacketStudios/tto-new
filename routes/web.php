@@ -20,8 +20,11 @@ Route::group(['middleware' => ['auth']], function() {
         return view('pages/inicio');
     });
 
-    Route::get('/clientes',function(){
-        return view('pages/clientes');
+    Route::get('/clientes/particulares',function(){
+        return view('pages/clientes/particulares');
+    });
+    Route::get('/clientes/empresas',function(){
+        return view('pages/clientes/empresas');
     });
 });
 Auth::routes();
